@@ -3,10 +3,12 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 // Import the demo slice
 import demoReducer from "../features/demo/demoSlice";
+import authReducer from "../features/Auth/authSlice";
 
 const store = configureStore({
   reducer: {
     demo: demoReducer, // Add the demo slice reducer here
+    auth: authReducer,
   },
 });
 

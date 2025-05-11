@@ -14,7 +14,6 @@ const initialState: DemoState = {
 
 export const fetchAllDemos = createAsyncThunk("demo/fetchAll", async () => {
   const response = await axios.get(`${BASE_URL}demo`);
-  console.log("Response from API:", response.data);
   return response.data.results; // Based on ResponseDto
 });
 
